@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Eagle Work Solutions</title>
+	<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" name="viewport">
+	<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/customCss.css">
+	<link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/popper.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	
+
+
+</head>
+<body>
+
+                                        
+<section id="create-acc">
+    <div class="container create-acc-container">
+        <div class="card create-acc-card" style="text-align: center;">
+          <div class="card-body">
+            <a href="index.html"><img src="images/Logo_Color.png" alt="" class="img-fluid"></a>
+          </div>
+          <h5 class="card-title create-acc-title">Create an account</h5>
+          <form class="create-acc-form">
+             <div class="row">
+                 <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1" class="create-acc-label">First Name</label>
+                        <input type="text" class="form-control create-acc-input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                    </div> 
+                 </div>
+                 <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1" class="create-acc-label">Last Name</label>
+                        <input type="text" class="form-control create-acc-input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                    </div> 
+                 </div>
+             </div>
+              <div class="row">
+                 <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1" class="create-acc-label">Mobile number</label>
+                        
+                        <input type="tel" class="form-control create-acc-input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                    </div> 
+                 </div>
+                 <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1" class="create-acc-label">Postal Code</label>
+                        <input type="text" class="form-control create-acc-input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                    </div> 
+                 </div>
+             </div>
+              <div class="row">
+                 <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1" class="create-acc-label">Email</label>
+                        <input type="email" class="form-control create-acc-input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                    </div> 
+                 </div>
+                 <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1" class="create-acc-label">Password</label>
+                        <input id="password-field" type="password" class="form-control create-acc-input" name="password" value="">
+                          <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                    </div> 
+                 </div>
+             </div>
+              <p class="send-email">We will send you an email to verify your email address.</p>
+              <button type="submit" class="btn continue-btn create-acc-continue-btn">continue</button>
+        </form>
+            <p class="already-acc">Already have an account? <a href="sign-in.html" class="term-policy"> Sign in</a></p>
+        </div>
+    </div>
+</section>
+					
+
+		
+
+<script>
+
+
+<!-- footer responsive menu -->
+$(document).ready(function() {
+  $('.footerHeading').click(function(e) {
+    var myDropdown = $(this).next('.footer-menu');
+    $('.footer-menu.active').not(myDropdown).removeClass('active');
+    myDropdown.toggleClass('active'); 
+    $('body').click(function() {
+      $('.footer-menu.active').removeClass('active');
+      $('body').off('click'); 
+    });
+    e.stopPropagation(); 
+  });
+  
+  
+  
+  
+  
+<!-- header responsive menu close on body click -->  
+  
+   $(document).click(function (event) {
+         var clickover = $(event.target);
+         var _opened = $(".navbar-collapse").hasClass("show");
+         if (_opened === true && !clickover.hasClass("navbar-toggler")) {
+             $(".navbar-toggler").click();
+         }
+     });
+	 
+});
+    
+    $(".toggle-password").click(function() {
+
+  $(this).toggleClass("fa-eye fa-eye-slash");
+  var input = $($(this).attr("toggle"));
+  if (input.attr("type") == "password") {
+    input.attr("type", "text");
+  } else {
+    input.attr("type", "password");
+  }
+});
+
+
+</script>
+
+</body>
+</html>
